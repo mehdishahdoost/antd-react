@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 import {useState} from 'react';
-import {PoweroffOutlined} from '@ant-design/icons';
+import {PoweroffOutlined, SearchOutlined} from '@ant-design/icons';
 import {Button} from 'antd';
 
 export default function AntdButton() {
@@ -23,7 +23,10 @@ export default function AntdButton() {
       <Button type='dashed'>Click</Button>
       <Button type='text'>Click</Button>
       <Button type='primary' block loading={loading} onClick={onClickFn}>Click</Button>
-      
+      <Button type='primary' style={{backgroundColor: 'red'}}>Click</Button>
+      <Button type='primary' icon={<PoweroffOutlined />}>Click</Button>
+      <Button type='primary' shape='circle' icon={<SearchOutlined/>}></Button>
+      <Button type='primary' shape='circle'>A</Button>
 </div>
   );
 }
